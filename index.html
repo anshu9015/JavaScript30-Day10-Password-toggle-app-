@@ -8,8 +8,23 @@
 </head>
 <body>
     <div class="input-box">
-        <input type="text" placeholder="password">
+        <input type="password" placeholder="password" id="password">
+        <img src="images/eye-close.png" id="eyeicons">
     </div>
+    <script>
+        let eyeicons = document.getElementById("eyeicons");
+        let password = document.getElementById("password");
+
+        eyeicons.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyeicons.src = "images/eye-open.png";
+            }else{
+                password.type = "password";
+                eyeicons.src = "images/eye-close.png";
+            }
+        }
+    </script>
     
 </body>
 </html>
